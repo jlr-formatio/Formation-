@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IA & Business Digital — Formation Premium · JL digital store</title>
+<meta name="description" content="Formation bilingue FR/EN de 69 pages : de l'idée au premier test, avec fiches, prompts, scripts et cas corrigé. Aucun revenu garanti.">
+<style>
+:root{--bg:#F5F0E1;--card:#fff;--ink:#1B2438;--navy:#14213D;--acc:#E9A23B;--soft:#EFE7D2;--mut:#5b6478;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1626;--card:#16223a;--ink:#EDE8D8;--navy:#0a1120;--soft:#1d2b47;--mut:#a3adc2;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1626;--card:#16223a;--ink:#EDE8D8;--navy:#0a1120;--soft:#1d2b47;--mut:#a3adc2;color-scheme:dark}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body[data-l=fr] .en,body[data-l=en] .fr{display:none}
+.w{max-width:760px;margin:0 auto;padding:0 18px}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--navy);color:#F5F0E1;border-left:6px solid var(--acc)}
+.top .w{display:flex;justify-content:space-between;align-items:center;padding:10px 18px;gap:10px}
+.top b{font-size:15px}.lang{display:flex;border:1px solid var(--acc);border-radius:8px;overflow:hidden}
+.lang button{background:none;border:0;color:#F5F0E1;padding:6px 12px;font-weight:700;font:inherit;font-weight:700}.lang button.on{background:var(--acc);color:#14213D}
+.hero{background:var(--navy);color:#F5F0E1;padding:38px 0 42px}
+.kick{color:var(--acc);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:32px;line-height:1.15;margin:10px 0 14px}.hero p{color:#dfe5f1;margin:0 0 22px}
+.btn{display:inline-block;background:var(--acc);color:#14213D;text-decoration:none;font-weight:800;border-radius:12px;padding:15px 24px;font-size:17px;text-align:center}
+.btn.alt{background:var(--soft);color:var(--ink)}
+section{padding:34px 0 6px}h2{font-size:24px;line-height:1.25;margin:0 0 12px}
+.grid{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+.stat{background:var(--card);border:1px solid var(--soft);border-radius:14px;padding:14px;text-align:center}.stat b{display:block;font-size:28px;color:var(--navy)}
+@media (prefers-color-scheme:dark){.stat b{color:var(--acc)}}
+:root[data-theme="dark"] .stat b{color:var(--acc)}
+.stat span{font-size:13px;color:var(--mut)}
+ul.ck{list-style:none;padding:0;margin:8px 0}ul.ck li{background:var(--card);border:1px solid var(--soft);border-radius:12px;padding:11px 14px 11px 44px;margin:8px 0;position:relative}
+ul.ck li:before{content:"✓";position:absolute;left:14px;top:10px;width:22px;height:22px;border-radius:50%;background:var(--acc);color:#14213D;font-weight:800;text-align:center;line-height:22px;font-size:14px}
+ol.ch{padding:0;margin:8px 0;list-style:none;counter-reset:c}ol.ch li{counter-increment:c;background:var(--card);border:1px solid var(--soft);border-radius:12px;padding:10px 14px 10px 54px;margin:7px 0;position:relative}
+ol.ch li:before{content:counter(c,decimal-leading-zero);position:absolute;left:10px;top:8px;width:34px;height:30px;border-radius:8px;background:var(--navy);color:var(--acc);font-weight:800;font-size:14px;text-align:center;line-height:30px}
+.two{display:grid;gap:12px;grid-template-columns:1fr 1fr}@media (max-width:560px){.two,.grid{grid-template-columns:1fr}.grid.s{grid-template-columns:1fr 1fr}h1{font-size:28px}}
+.box{background:var(--soft);border-left:5px solid var(--acc);border-radius:10px;padding:14px 16px;margin:12px 0}.box b{display:block;margin-bottom:4px}
+.price{background:var(--navy);color:#F5F0E1;border-radius:18px;padding:26px 20px;text-align:center;margin:10px 0}
+.price .p{font-size:40px;font-weight:800;color:var(--acc);margin:4px 0}.price small{color:#cbd3e4;display:block;margin:8px 0 18px}
+details{background:var(--card);border:1px solid var(--soft);border-radius:12px;margin:8px 0;padding:0 16px}summary{padding:14px 0;font-weight:700;cursor:pointer;line-height:1.35}
+details p{margin:0 0 14px;color:var(--ink)}
+button,.btn,summary,a{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+body{padding-bottom:86px}
+.navl{display:flex;gap:8px;overflow-x:auto;padding:0 18px 10px!important;max-width:760px;margin:0 auto}
+.navl a{flex:none;color:#F5F0E1;text-decoration:none;font-weight:700;font-size:14px;padding:7px 13px;border-radius:20px;background:rgba(255,255,255,.12)}
+.navl a:active{background:var(--acc);color:#14213D}
+[id^=a-]{scroll-margin-top:130px}
+.cta{position:fixed;left:0;right:0;bottom:0;z-index:7;background:var(--navy);color:#F5F0E1;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 18px calc(10px + env(safe-area-inset-bottom,0px));border-top:3px solid var(--acc)}
+.cta b{font-size:22px;color:var(--acc)}.cta .btn{padding:12px 20px;font-size:16px}
+.chd summary{display:flex;gap:12px;align-items:center}.chd .num{flex:none;width:34px;height:30px;border-radius:8px;background:var(--navy);color:var(--acc);font-size:14px;text-align:center;line-height:30px}
+footer{padding:30px 0 40px;font-size:13px;color:var(--mut)}
+</style></head><body data-l="fr">
+<div class="top"><div class="w"><b>JL digital store</b><div class="lang"><button type="button" data-lang="fr" class="on">FR</button><button type="button" data-lang="en">EN</button></div></div>
+<nav class="navl"><a href="#a-content"><span class="fr">Contenu</span><span class="en">Content</span></a><a href="#a-chapters"><span class="fr">Chapitres</span><span class="en">Chapters</span></a><a href="#a-price"><span class="fr">Prix</span><span class="en">Price</span></a><a href="#a-faq">FAQ</a></nav></div>
+
+<div class="hero"><div class="w">
+<div class="fr"><div class="kick">Édition premium · FR / EN · 69 pages</div>
+<h1>De l'idée au premier test, avec l'IA et une méthode claire</h1>
+<p>IA &amp; Business Digital est une formation bilingue pour jeunes adultes de 18 ans et plus : 13 chapitres, 12 modèles de business, le dropshipping de A à Z, des fiches à remplir, des prompts, des scripts et un cas corrigé. Des méthodes, pas de promesses de gains.</p>
+<a class="btn" data-buy href="#">Obtenir la formation</a></div>
+<div class="en"><div class="kick">Premium edition · FR / EN · 69 pages</div>
+<h1>From idea to first test, with AI and a clear method</h1>
+<p>AI &amp; Digital Business is a bilingual training guide for young adults aged 18+: 13 chapters, 12 business models, dropshipping from A to Z, worksheets, prompts, scripts and a worked case. Methods, not promises of earnings.</p>
+<a class="btn" data-buy href="#">Get the training</a></div>
+</div></div>
+
+<div class="w">
+<section><div class="grid s" style="grid-template-columns:repeat(4,1fr)">
+<div class="stat"><b>69</b><span class="fr">pages</span><span class="en">pages</span></div>
+<div class="stat"><b>13</b><span class="fr">chapitres</span><span class="en">chapters</span></div>
+<div class="stat"><b>6</b><span class="fr">fiches</span><span class="en">worksheets</span></div>
+<div class="stat"><b>FR+EN</b><span class="fr">côte à côte</span><span class="en">side by side</span></div>
+</div></section>
+
+<section class="fr"><h2>Pour qui ?</h2>
+<p>Pour les débutants et les porteurs d'un premier projet en Europe et aux États-Unis. Aucun niveau technique avancé n'est nécessaire : il faut un ordinateur ou un smartphone, une connexion et du temps pour pratiquer.</p>
+<div class="two"><div class="box"><b>C'est pour vous si…</b>vous voulez choisir un projet, le tester avec un petit budget et décider avec des chiffres.</div>
+<div class="box"><b>Ce n'est pas pour vous si…</b>vous cherchez un revenu garanti ou une méthode rapide sans effort. Il n'y en a pas ici.</div></div></section>
+<section class="en"><h2>Who is it for?</h2>
+<p>For beginners and people starting a first project in Europe and the United States. No advanced technical knowledge is needed: you need a computer or smartphone, a connection and time to practise.</p>
+<div class="two"><div class="box"><b>It is for you if…</b>you want to pick a project, test it on a small budget and decide with numbers.</div>
+<div class="box"><b>It is not for you if…</b>you want guaranteed income or an effortless shortcut. There is none here.</div></div></section>
+
+<div id="a-content"></div><section class="fr"><h2>Ce que vous recevez</h2><ul class="ck">
+<li><b>13 chapitres</b> de 3 leçons chacun, avec une synthèse visuelle, un objectif et une question à se poser.</li>
+<li><b>6 fiches remplissables</b> : offre, fournisseur, rentabilité, planning de contenu, checklist avant lancement, journal d'expérimentation.</li>
+<li><b>8 prompts IA</b> prêts à adapter, en français et en anglais.</li>
+<li><b>4 scripts</b> : proposition de pilote, demande fournisseur, incident de livraison, mention de lien affilié.</li>
+<li><b>Un glossaire</b> et <b>un cas corrigé</b> sur la rentabilité réelle d'une vente.</li></ul></section>
+<section class="en"><h2>What you get</h2><ul class="ck">
+<li><b>13 chapters</b> of 3 lessons each, with a visual recap, a chapter outcome and a checkpoint question.</li>
+<li><b>6 fillable worksheets</b>: offer, supplier, economics, content planner, pre-launch checklist, experiment log.</li>
+<li><b>8 AI prompts</b> ready to adapt, in French and English.</li>
+<li><b>4 scripts</b>: pilot proposal, supplier enquiry, delivery incident, affiliate-link disclosure.</li>
+<li><b>A glossary</b> and <b>a worked case</b> on the real profitability of a sale.</li></ul></section>
+
+<div id="a-chapters"></div><section><h2><span class="fr">Le parcours en 13 chapitres</span><span class="en">The 13-chapter path</span></h2>
+<p class="mut fr" style="color:var(--mut);font-size:14px;margin:0 0 6px">Touchez un chapitre pour voir son objectif.</p><p class="mut en" style="color:var(--mut);font-size:14px;margin:0 0 6px">Tap a chapter to see its outcome.</p><div class="fr" id="cf"></div><div class="en" id="ce"></div></section>
+
+<section class="fr"><h2>Ce qui rend cette formation différente</h2>
+<div class="box"><b>Des chiffres, pas des rêves</b>Le cas corrigé montre qu'un ROAS élevé peut cacher une perte : vous apprenez à calculer contribution, seuil de rentabilité et trésorerie avant d'augmenter un budget.</div>
+<div class="box"><b>Un projet, un test, une décision</b>Le plan de 30 jours vous fait avancer avec des preuves : écouter, créer, lancer un petit pilote, puis calculer et décider.</div>
+<div class="box"><b>Les règles comptent</b>Le dropshipping est présenté avec ses responsabilités : fournisseurs, conformité, retours, taxes. Aucune promesse de « business sans risque ».</div></section>
+<section class="en"><h2>What makes it different</h2>
+<div class="box"><b>Numbers, not dreams</b>The worked case shows a high ROAS can hide a loss: you learn to calculate contribution, break-even and cash before raising a budget.</div>
+<div class="box"><b>One project, one test, one decision</b>The 30-day plan moves you forward with evidence: listen, build, run a small pilot, then calculate and decide.</div>
+<div class="box"><b>Rules matter</b>Dropshipping is presented with its responsibilities: suppliers, compliance, returns, taxes. No promise of a “risk-free business”.</div></section>
+
+<div id="a-price"></div><section><div class="price">
+<div class="fr"><div class="kick">Formation Premium · PDF</div><div class="p">39,99 €</div><small>Accès immédiat après paiement · Produit numérique téléchargeable : pas de remboursement après téléchargement, sauf fichier défectueux.</small><a class="btn" data-buy href="#">Obtenir la formation</a></div>
+<div class="en"><div class="kick">Premium Training · PDF</div><div class="p">€39.99</div><small>Instant access after payment · Downloadable digital product: no refund after download, except for a defective file.</small><a class="btn" data-buy href="#">Get the training</a></div>
+</div></section>
+
+<div id="a-faq"></div><section><h2>FAQ</h2>
+<div class="fr">
+<details><summary>Vais-je gagner de l'argent avec cette formation ?</summary><p>Aucun revenu n'est garanti. La formation donne des méthodes et des exemples pédagogiques ; les résultats dépendent de votre travail, de votre marché et de votre régularité.</p></details>
+<details><summary>Faut-il un gros budget ?</summary><p>Non. La formation vous aide à fixer un budget de test que vous pouvez vous permettre de perdre, et vous déconseille d'emprunter pour un modèle non validé.</p></details>
+<details><summary>Quel niveau faut-il avoir ?</summary><p>Aucun niveau technique avancé. Les débutants complets commencent par apprendre et construire une démonstration avant de facturer un service.</p></details>
+<details><summary>Est-ce valable partout ?</summary><p>Le guide cible l'Europe et les États-Unis, où les règles diffèrent selon les pays et les états. Les encadrés sont des repères, pas un dossier juridique : vérifiez auprès de sources officielles.</p></details>
+<details><summary>Le dropshipping, c'est vraiment sans stock ?</summary><p>Vous n'avez pas de stock chez vous, mais vous gardez les coûts et les responsabilités : relation client, remboursements, suivi, taxes. Deux chapitres complets en parlent.</p></details>
+<details><summary>Comment fonctionnent les fiches remplissables ?</summary><p>Elles se remplissent dans un lecteur PDF compatible ou s'impriment. Les calculs restent manuels. Enregistrez une copie après saisie et n'y mettez ni mot de passe ni données bancaires.</p></details>
+<details><summary>Dans quelle langue est la formation ?</summary><p>En français et en anglais, côte à côte sur chaque page.</p></details>
+<details><summary>Comment je reçois la formation ?</summary><p>Cliquez sur « Acheter maintenant » : une fois votre achat effectué sur Whop, le PDF apparaît immédiatement avec un lien de téléchargement. Enregistrez-le sur votre appareil.</p></details>
+</div>
+<div class="en">
+<details><summary>Will I earn money with this training?</summary><p>No income is guaranteed. The training gives methods and teaching examples; results depend on your work, your market and your consistency.</p></details>
+<details><summary>Do I need a big budget?</summary><p>No. The training helps you set a test budget you can afford to lose, and advises against borrowing for an unvalidated model.</p></details>
+<details><summary>What level do I need?</summary><p>No advanced technical level. Complete beginners first learn and build a demonstration before charging for a service.</p></details>
+<details><summary>Does it apply everywhere?</summary><p>The guide targets Europe and the United States, where rules differ by country and state. The boxes are guidance, not a legal file: check official sources.</p></details>
+<details><summary>Is dropshipping really no-stock?</summary><p>You hold no stock at home, but you keep the costs and responsibilities: support, refunds, tracking, taxes. Two full chapters cover this.</p></details>
+<details><summary>How do the fillable worksheets work?</summary><p>They can be filled in a compatible PDF reader or printed. Calculations remain manual. Save a copy after entry and do not enter passwords or banking details.</p></details>
+<details><summary>What language is the training in?</summary><p>French and English, side by side on every page.</p></details>
+<details><summary>How do I receive it?</summary><p>Click “Buy now”: once your purchase is completed on Whop, the PDF appears immediately with a download link. Save it to your device.</p></details>
+</div></section>
+
+<section style="text-align:center;padding-bottom:20px"><a class="btn" data-buy href="#"><span class="fr">Obtenir la formation</span><span class="en">Get the training</span></a></section>
+
+<footer><p class="fr">Formation éducative : aucun revenu garanti. Les budgets, prix et résultats chiffrés sont pédagogiques ; ce ne sont ni des témoignages ni des moyennes de marché. Vérifiez les règles de chaque plateforme et la réglementation de votre pays. © JL digital store</p>
+<p class="en">Educational training: no income guaranteed. Budgets, prices and figures are for teaching; they are neither testimonials nor market averages. Check each platform's rules and your country's regulations. © JL digital store</p></footer>
+</div>
+<div class="cta"><b><span class="fr">39,99 €</span><span class="en">€39.99</span></b><a class="btn" data-buy href="#"><span class="fr">Acheter maintenant</span><span class="en">Buy now</span></a></div>
+<script>
+const LINK="https://whop.com/jl-digital-store/ai-digital-business-starter-guide-en-fr/"; // Lien du produit sur Whop
+const CH=[["Trouver un marché qui paie", "Find a market that pays", "Choisir une clientèle, un problème et une première offre testable.", "Choose a customer group, a problem and a testable first offer."], ["Utiliser l’IA comme un professionnel", "Use AI professionally", "Obtenir des livrables fiables, avec un brief et un contrôle humain.", "Create reliable deliverables with a clear brief and human review."], ["12 business possibles sur Internet", "12 online business models", "Comparer revenus, compétences, démarrage et difficultés avant de choisir.", "Compare revenue, skills, first steps and difficulties before choosing."], ["Gagner de l’argent avec une activité IA", "Earn through an AI-assisted business", "Transformer une compétence en offre livrable et facturable.", "Turn a skill into an offer you can deliver and invoice."], ["Communication qui inspire confiance", "Communication that builds trust", "Rédiger des messages clairs, crédibles et adaptés au canal.", "Write clear, credible messages suited to each channel."], ["Attirer une audience utile", "Attract a relevant audience", "Créer des contenus qui conduisent à une action mesurable.", "Create content that leads to a measurable action."], ["Vendre un produit numérique", "Sell a digital product", "Passer d’un fichier à une expérience d’achat claire et fiable.", "Turn a file into a clear and reliable buying experience."], ["Publicité et mesure des résultats", "Advertising and measurement", "Tester sans confondre visibilité, commandes et rentabilité.", "Test without confusing visibility, orders and profitability."], ["Dropshipping : comprendre et choisir", "Dropshipping: understand and choose", "Sélectionner un produit et un marché avant de créer la boutique.", "Select a product and market before creating the store."], ["Fournisseurs, conformité et coûts", "Suppliers, compliance and costs", "Sécuriser le partenaire, le produit et les conditions commerciales.", "Check the partner, product and commercial terms."], ["Créer et lancer la boutique", "Build and launch the store", "Mettre en place une boutique minimale et tester le parcours d’achat.", "Set up a minimal store and test the buying journey."], ["Commandes, retours et rentabilité", "Orders, returns and profitability", "Piloter l’activité après la vente et calculer le résultat réel.", "Manage operations after the sale and calculate the actual result."], ["Plan de lancement et croissance", "Launch plan and growth", "Avancer en 30 jours avec des preuves et des décisions explicites.", "Make progress in 30 days through evidence and explicit decisions."]];
+const esc=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const row=(c,l)=>`<details class="chd"><summary><b class="num">${String(c.i+1).padStart(2,'0')}</b><span>${esc(c.t[l])}</span></summary><p>${esc(c.o[l])}</p></details>`;
+const list=l=>CH.map((c,i)=>row({i,t:[c[0],c[1]],o:[c[2],c[3]]},l)).join('');
+document.getElementById('cf').innerHTML=list(0);
+document.getElementById('ce').innerHTML=list(1);
+document.querySelectorAll('[data-buy]').forEach(a=>{a.href=LINK;a.target='_top'});
+const set=l=>{document.body.dataset.l=l;document.documentElement.lang=l;document.querySelectorAll('[data-lang]').forEach(b=>b.classList.toggle('on',b.dataset.lang==l));try{localStorage.setItem('jl-sales-lang',l)}catch(e){}};
+try{const l=localStorage.getItem('jl-sales-lang');if(l)set(l)}catch(e){}
+document.addEventListener('click',e=>{
+ const b=e.target.closest('[data-lang]');if(b){set(b.dataset.lang);return}
+ const a=e.target.closest('a[href^="#a-"]');if(a){e.preventDefault();const t=document.getElementById(a.getAttribute('href').slice(1));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})}
+});
+</script></body></html>
