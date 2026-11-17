@@ -162,6 +162,7 @@ document.getElementById('ce').innerHTML=list(1);
 document.querySelectorAll('[data-buy]').forEach(a=>{a.href=LINK;a.target='_top'});
 const set=l=>{document.body.dataset.l=l;document.documentElement.lang=l;document.querySelectorAll('[data-lang]').forEach(b=>b.classList.toggle('on',b.dataset.lang==l));try{localStorage.setItem('jl-sales-lang',l)}catch(e){}};
 try{const l=localStorage.getItem('jl-sales-lang');if(l)set(l)}catch(e){}
+try{const q=new URLSearchParams(location.search).get('lang');if(q==='en'||q==='fr')set(q)}catch(e){}
 document.addEventListener('click',e=>{
  const b=e.target.closest('[data-lang]');if(b){set(b.dataset.lang);return}
  const a=e.target.closest('a[href^="#a-"]');if(a){e.preventDefault();const t=document.getElementById(a.getAttribute('href').slice(1));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})}
