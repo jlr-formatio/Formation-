@@ -52,6 +52,11 @@ ol.st li:before{content:counter(s);position:absolute;left:12px;top:9px;width:30p
 .up{background:var(--navy);color:#F5F0E1;border-radius:18px;padding:24px 20px;margin:10px 0}
 .up h2{color:#F5F0E1}.up p{color:#dfe5f1;margin:0 0 16px}.up .p{font-size:30px;font-weight:800;color:var(--acc);margin:0 0 14px}
 details{background:var(--card);border:1px solid var(--soft);border-radius:12px;margin:8px 0;padding:0 16px}summary{padding:14px 0;font-weight:700;cursor:pointer;line-height:1.35}details p{margin:0 0 14px}
+.me{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;background:var(--card);border:1px solid var(--soft);border-radius:16px;padding:16px;margin:8px 0}
+.me img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid var(--acc);display:block}
+.me .nm{display:block;font-size:18px;line-height:1.3;font-weight:800}.me .ro{display:block;font-size:14px;font-weight:700;color:var(--mut)}
+.me p{grid-column:1/-1;margin:2px 0 0;font-size:15px;color:var(--mut)}.me p a{color:inherit}
+@media (max-width:420px){.me{grid-template-columns:76px 1fr}.me img{width:76px;height:76px}}
 footer{padding:28px 0 40px;font-size:13px;color:var(--mut)}footer a{color:var(--mut)}
 a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 </style></head><body>
@@ -112,6 +117,12 @@ a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:transpare
 <ol class="st en"><li>Pick a resource above.</li><li>Tap “Get it free”: the page opens on Whop.</li><li>Follow the steps on Whop ($0, no card needed), then download the file.</li></ol>
 </section>
 
+<section id="createur"><h2><span class="fr">Qui est derrière <span translate="no">JL digital store</span>&nbsp;?</span><span class="en">Who is behind JL digital store?</span></h2>
+<div class="me"><picture><source srcset="../img/brand/fondateur-240.webp" type="image/webp"><img src="../img/brand/fondateur-240.jpg" width="240" height="240" alt="Jean Lucien Randrianirina Rivo, fondateur de JL digital store / founder of JL digital store" loading="lazy" decoding="async"></picture>
+<div><span class="nm" translate="no">Jean Lucien Randrianirina Rivo</span><span class="ro"><span class="fr">Fondateur de JL digital store</span><span class="en">Founder of JL digital store</span></span></div>
+<p class="fr">J'ai créé JL digital store pour proposer des guides clairs et honnêtes sur l'IA et le business en ligne : des méthodes à tester pas à pas, sans promesse de gains. Une question ? Écrivez-moi : <a href="mailto:jldigitalstore@outlook.com">jldigitalstore@outlook.com</a></p>
+<p class="en">I created JL digital store to offer clear, honest guides on AI and online business: step-by-step methods to test, with no promises of earnings. A question? Email me: <a href="mailto:jldigitalstore@outlook.com">jldigitalstore@outlook.com</a></p>
+</div></section>
 <section id="guide"><div class="up">
 <div class="fr"><div class="kick">Pour aller plus loin</div>
 <h2>IA &amp; Business Digital : le guide complet</h2>
