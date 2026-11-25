@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr" data-l="fr"><head><meta charset="utf-8">
+<script>
+/* Ancienne adresse GitHub Pages -> Cloudflare Pages (ne s'exécute que sur github.io). */
+(function(){var h=location.hostname;if(/(^|\.)github\.io$/i.test(h)){var p=location.pathname.replace(/^\/formation-(?=\/|$)/i,'')||'/';location.replace('https://jl-digital-store.pages.dev'+p+location.search+location.hash)}})();
+/* Langue : ?lang=  >  choix enregistré (même clé que la page de vente)  >  langue du téléphone. Robots : FR. */
+(function(){var d=document.documentElement,l=null;
+try{var q=new URLSearchParams(location.search).get('lang');if(q==='fr'||q==='en')l=q}catch(e){}
+if(!l){try{var s=localStorage.getItem('jl-sales-lang');if(s==='fr'||s==='en')l=s}catch(e){}}
+if(!l&&!/bot|crawl|spider|slurp|lighthouse/i.test(navigator.userAgent||'')){var a=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||''];for(var i=0;i<a.length&&!l;i++){var k=String(a[i]).slice(0,2).toLowerCase();if(k==='fr'||k==='en')l=k}if(!l)l='en'}
+l=l||'fr';d.lang=l;d.setAttribute('data-l',l)})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ressources IA gratuites · JL digital store</title>
+<meta name="description" content="4 ressources gratuites pour utiliser l'IA dans un projet en ligne : prompts, kit freelance et kit IA. Téléchargement gratuit, sans carte bancaire. Aucun revenu garanti.">
+<link rel="canonical" href="https://jl-digital-store.pages.dev/ressources/">
+<meta property="og:type" content="website"><meta property="og:url" content="https://jl-digital-store.pages.dev/ressources/"><meta property="og:site_name" content="JL digital store">
+<meta property="og:title" content="Ressources IA gratuites · JL digital store">
+<meta property="og:description" content="Prompts, kit freelance et kit IA, gratuits. Free AI resources: prompts, freelance kit and AI kit.">
+<meta property="og:image" content="https://jl-digital-store.pages.dev/img/workspace.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="900">
+<meta property="og:locale" content="fr_FR"><meta property="og:locale:alternate" content="en_US">
+<meta name="theme-color" content="#14213D">
+<link rel="icon" type="image/png" sizes="48x48" href="../img/brand/favicon-48.png"><link rel="icon" type="image/png" sizes="32x32" href="../img/brand/favicon-32.png"><link rel="apple-touch-icon" href="../img/brand/apple-touch-icon.png">
+<style>
+:root{--bg:#F5F0E1;--card:#fff;--ink:#1B2438;--navy:#14213D;--acc:#E9A23B;--soft:#EFE7D2;--mut:#5b6478}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1626;--card:#16223a;--ink:#EDE8D8;--navy:#0a1120;--soft:#1d2b47;--mut:#a3adc2;color-scheme:dark}}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+html[data-l=fr] .en,html[data-l=en] .fr{display:none}
+.w{max-width:760px;margin:0 auto;padding:0 18px}
+.top{position:sticky;top:0;z-index:5;background:var(--navy);color:#F5F0E1;border-left:6px solid var(--acc)}
+.top .w{display:flex;justify-content:space-between;align-items:center;padding:10px 18px;gap:10px}
+.top a.brand{color:#F5F0E1;text-decoration:none;font-weight:700;font-size:15px}
+.lang{display:flex;border:1px solid var(--acc);border-radius:8px;overflow:hidden}
+.lang button{background:none;border:0;color:#F5F0E1;padding:6px 12px;font:inherit;font-weight:700}
+html[data-l=fr] .lang [data-lang=fr],html[data-l=en] .lang [data-lang=en]{background:var(--acc);color:#14213D}
+.hero{background:var(--navy);color:#F5F0E1;padding:34px 0 38px}
+.kick{color:var(--acc);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:30px;line-height:1.15;margin:10px 0 14px}.hero p{color:#dfe5f1;margin:0 0 8px}
+.ph{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:16px;margin:24px 0 0;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+section{padding:30px 0 6px}h2{font-size:23px;line-height:1.25;margin:0 0 12px}
+.btn{display:inline-block;background:var(--acc);color:#14213D;text-decoration:none;font-weight:800;border-radius:12px;padding:13px 20px;font-size:16px;text-align:center}
+.prod{display:grid;grid-template-columns:120px 1fr;gap:14px;background:var(--card);border:1px solid var(--soft);border-radius:16px;padding:14px;margin:12px 0;scroll-margin-top:80px}
+.cover{border-radius:10px;background:linear-gradient(160deg,#14213D 0%,#1f3461 100%);color:#F5F0E1;display:flex;flex-direction:column;justify-content:space-between;padding:10px;min-height:160px;border-bottom:5px solid var(--acc)}
+.cover .big{font-size:34px;font-weight:800;color:var(--acc);line-height:1}.cover .ct{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;line-height:1.3}
+.cover .br{font-size:10px;color:#cbd3e4}
+.tag{display:inline-block;background:var(--soft);color:var(--ink);font-size:12px;font-weight:800;border-radius:20px;padding:3px 10px;letter-spacing:.03em}
+.prod h3{font-size:18px;line-height:1.3;margin:6px 0 4px}.prod p{margin:0 0 12px;font-size:15px;color:var(--mut)}
+@media (max-width:480px){.prod{grid-template-columns:96px 1fr}.cover{min-height:132px}.cover .big{font-size:28px}}
+ol.st{padding:0;margin:8px 0;list-style:none;counter-reset:s}ol.st li{counter-increment:s;background:var(--card);border:1px solid var(--soft);border-radius:12px;padding:11px 14px 11px 54px;margin:8px 0;position:relative}
+ol.st li:before{content:counter(s);position:absolute;left:12px;top:9px;width:30px;height:30px;border-radius:8px;background:var(--navy);color:var(--acc);font-weight:800;text-align:center;line-height:30px}
+.up{background:var(--navy);color:#F5F0E1;border-radius:18px;padding:24px 20px;margin:10px 0}
+.up h2{color:#F5F0E1}.up p{color:#dfe5f1;margin:0 0 16px}.up .p{font-size:30px;font-weight:800;color:var(--acc);margin:0 0 14px}
+details{background:var(--card);border:1px solid var(--soft);border-radius:12px;margin:8px 0;padding:0 16px}summary{padding:14px 0;font-weight:700;cursor:pointer;line-height:1.35}details p{margin:0 0 14px}
+footer{padding:28px 0 40px;font-size:13px;color:var(--mut)}footer a{color:var(--mut)}
+a,button,summary{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+</style></head><body>
+<div class="top"><div class="w"><a class="brand" href="../" translate="no">JL digital store</a><div class="lang"><button type="button" data-lang="fr" lang="fr">FR</button><button type="button" data-lang="en" lang="en">EN</button></div></div></div>
+
+<div class="hero"><div class="w">
+<div class="fr"><div class="kick">Ressources gratuites · JL digital store</div>
+<h1>Commencez avec l'IA, gratuitement</h1>
+<p>4 ressources gratuites pour utiliser l'IA dans votre projet en ligne. Téléchargement sur Whop, notre plateforme de livraison : 0 €, sans carte bancaire.</p></div>
+<div class="en"><div class="kick">Free resources · JL digital store</div>
+<h1>Get started with AI, for free</h1>
+<p>4 free resources to use AI in your online project. Download on Whop, our delivery platform: $0, no card needed.</p></div>
+<picture><source srcset="../img/workspace.webp" type="image/webp"><img class="ph" src="../img/workspace.jpg" width="1200" height="900" alt="Bureau avec ordinateur portable et carnet de croquis / Desk with laptop and sketch notebook" decoding="async"></picture>
+</div></div>
+
+<div class="w">
+<section id="ressources"><h2><span class="fr">Les 4 ressources</span><span class="en">The 4 resources</span></h2>
+
+<article class="prod" id="prompts-100">
+<div class="cover"><span class="big">100</span><span class="ct">AI prompts</span><span class="br" translate="no">JL digital store</span></div>
+<div><span class="tag"><span class="fr">Gratuit · FR/EN</span><span class="en">Free · EN/FR</span></span>
+<h3 translate="no">100 AI Prompts to Earn, Build &amp; Sell Online</h3>
+<p class="fr">100 prompts IA prêts à copier pour trouver une idée, construire votre offre et vendre en ligne.</p>
+<p class="en">100 ready-to-copy AI prompts to find an idea, build your offer and sell online.</p>
+<a class="btn" data-free href="https://whop.com/jl-digital-store/100-ai-prompts-to-earn-build-and-sell-online-en-fr/"><span class="fr">Recevoir gratuitement</span><span class="en">Get it free</span></a></div>
+</article>
+
+<article class="prod" id="prompts-150">
+<div class="cover"><span class="big">150</span><span class="ct">Prompts IA</span><span class="br" translate="no">JL digital store</span></div>
+<div><span class="tag"><span class="fr">Gratuit</span><span class="en">Free</span></span>
+<h3><span class="fr">Pack de 150 prompts IA</span><span class="en">150 AI prompts pack</span></h3>
+<p class="fr">150 prompts IA prêts à l'emploi pour gagner du temps dans votre projet en ligne.</p>
+<p class="en">150 ready-to-use AI prompts to save time on your online project.</p>
+<a class="btn" data-free href="https://whop.com/jl-digital-store/"><span class="fr">Recevoir gratuitement</span><span class="en">Get it free</span></a></div>
+</article>
+
+<article class="prod" id="kit-freelance">
+<div class="cover"><span class="big">Kit</span><span class="ct">Freelance · IA</span><span class="br" translate="no">JL digital store</span></div>
+<div><span class="tag"><span class="fr">Gratuit</span><span class="en">Free</span></span>
+<h3 translate="no">IA Freelance Income Starter Kit</h3>
+<p class="fr">Un kit de démarrage pour lancer une activité freelance avec l'aide de l'IA.</p>
+<p class="en">A starter kit to launch a freelance activity with the help of AI.</p>
+<a class="btn" data-free href="https://whop.com/jl-digital-store/ia-freelance-income-starter-kit/"><span class="fr">Recevoir gratuitement</span><span class="en">Get it free</span></a></div>
+</article>
+
+<article class="prod" id="kit-ia-ultime">
+<div class="cover"><span class="big">Kit</span><span class="ct">IA ultime</span><span class="br" translate="no">JL digital store</span></div>
+<div><span class="tag"><span class="fr">Gratuit</span><span class="en">Free</span></span>
+<h3 translate="no">Le Kit IA Ultime</h3>
+<p class="fr">Une sélection de ressources IA pour démarrer et gagner du temps.</p>
+<p class="en">A selection of AI resources to get started and save time.</p>
+<a class="btn" data-free href="https://whop.com/jl-digital-store/le-kit-ia-ultime/"><span class="fr">Recevoir gratuitement</span><span class="en">Get it free</span></a></div>
+</article>
+</section>
+
+<section><h2><span class="fr">Comment ça marche</span><span class="en">How it works</span></h2>
+<ol class="st fr"><li>Choisissez une ressource ci-dessus.</li><li>Touchez « Recevoir gratuitement » : la page s'ouvre sur Whop.</li><li>Suivez les étapes sur Whop (0 €, sans carte bancaire), puis téléchargez le fichier.</li></ol>
+<ol class="st en"><li>Pick a resource above.</li><li>Tap “Get it free”: the page opens on Whop.</li><li>Follow the steps on Whop ($0, no card needed), then download the file.</li></ol>
+</section>
+
+<section id="guide"><div class="up">
+<div class="fr"><div class="kick">Pour aller plus loin</div>
+<h2>IA &amp; Business Digital : le guide complet</h2>
+<p>De l'idée au premier test, avec l'IA et une méthode claire : 13 chapitres, 12 modèles de business, le dropshipping de A à Z, des fiches à remplir et un cas corrigé. Des méthodes, pas de promesses de gains.</p>
+<div class="p">29,99 €</div>
+<a class="btn" href="../?lang=fr&amp;utm_source=ressources">Découvrir le guide</a></div>
+<div class="en"><div class="kick">Go further</div>
+<h2>AI &amp; Digital Business: the complete guide</h2>
+<p>From idea to first test, with AI and a clear method: 13 chapters, 12 business models, dropshipping from A to Z, worksheets and a worked case. Methods, not promises of earnings.</p>
+<div class="p">€29.99</div>
+<a class="btn" href="../?lang=en&amp;utm_source=ressources">See the guide</a></div>
+</div></section>
+
+<section><h2>FAQ</h2>
+<div class="fr">
+<details><summary>Est-ce vraiment gratuit ?</summary><p>Oui. Les 4 ressources sont à 0 €. Aucune carte bancaire n'est demandée.</p></details>
+<details><summary>Pourquoi passer par Whop ?</summary><p>Whop est la plateforme qui livre nos fichiers : vous y retrouvez vos téléchargements à tout moment.</p></details>
+<details><summary>Vais-je gagner de l'argent avec ces ressources ?</summary><p>Aucun revenu n'est garanti. Ce sont des outils et des méthodes ; les résultats dépendent de votre travail et de votre marché.</p></details>
+</div>
+<div class="en">
+<details><summary>Is it really free?</summary><p>Yes. All 4 resources cost $0. No card is required.</p></details>
+<details><summary>Why Whop?</summary><p>Whop is the platform that delivers our files: you can find your downloads there at any time.</p></details>
+<details><summary>Will I make money with these resources?</summary><p>No income is guaranteed. These are tools and methods; results depend on your work and your market.</p></details>
+</div>
+</section>
+
+<footer><p class="fr">Ressources éducatives : aucun revenu garanti. Contact : <a href="mailto:jldigitalstore@outlook.com">jldigitalstore@outlook.com</a> · © <span translate="no">JL digital store</span></p>
+<p class="en">Educational resources: no income guaranteed. Contact: <a href="mailto:jldigitalstore@outlook.com">jldigitalstore@outlook.com</a> · © <span translate="no">JL digital store</span></p></footer>
+</div>
+<script>
+document.querySelectorAll('[data-free]').forEach(a=>{a.target='_top';a.rel='noopener'});
+const set=(l,save)=>{const d=document.documentElement;d.dataset.l=l;d.lang=l;document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang==l)));if(save){try{localStorage.setItem('jl-sales-lang',l)}catch(e){}}};
+set(document.documentElement.dataset.l==='en'?'en':'fr',false);
+try{const q=new URLSearchParams(location.search).get('lang');if(q==='en'||q==='fr')set(q,true)}catch(e){}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-lang]');if(b)set(b.dataset.lang,true)});
+</script></body></html>
