@@ -3,7 +3,11 @@
 <script>
 /* Ancienne adresse GitHub Pages -> nouvelle adresse Cloudflare Pages.
    Ne s'exécute QUE sur github.io : aucune boucle sur pages.dev (même fichier pour les deux sites). */
-(function(){var h=location.hostname;if(/(^|\.)github\.io$/i.test(h)){var p=location.pathname.replace(/^\/formation-(?=\/|$)/i,'')||'/';location.replace('https://jl-digital-store.pages.dev'+p+location.search+location.hash)}})();
+(function(){var h=location.hostname;if(/(^|\.)github\.io$/i.test(h)){var p=location.pathname.replace(/^\/formation-(?=\/|$)/i,'')||'/',q=location.search,r='';
+/* On garde la vraie provenance (Facebook, Instagram…) pour Clarity : sinon elle s'affiche « github.io ». */
+try{r=document.referrer?new URL(document.referrer).hostname:''}catch(e){}
+if(r&&!/github\.io$/i.test(r)&&!/[?&](utm_source|ref)=/.test(q))q+=(q?'&':'?')+'ref='+encodeURIComponent(r);
+location.replace('https://jl-digital-store.pages.dev'+p+q+location.hash)}})();
 /* Langue choisie avant l'affichage : ?lang=  >  choix enregistré  >  langue du téléphone. Robots : FR. */
 (function(){var d=document.documentElement,l=null;
 try{var q=new URLSearchParams(location.search).get('lang');if(q==='fr'||q==='en')l=q}catch(e){}
@@ -77,6 +81,15 @@ body{padding-bottom:86px}
 .me p{grid-column:1/-1;margin:2px 0 0;font-size:15px;color:var(--mut)}.me p a{color:inherit}
 @media (max-width:420px){.me{grid-template-columns:76px 1fr}.me img{width:76px;height:76px}}
 footer{padding:30px 0 40px;font-size:13px;color:var(--mut)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 20px;padding:0;list-style:none}
+.chips li{font-size:13px;font-weight:700;color:#F5F0E1;background:rgba(255,255,255,.12);border:1px solid rgba(233,162,59,.45);border-radius:20px;padding:4px 11px;line-height:1.4}
+.trust{display:block;margin:10px 0 0;font-size:13px;color:#cbd3e4}
+.trust:before{content:"🔒 "}
+.hero .sub{font-size:16px;margin:0 0 14px}
+.cta .pr{display:flex;flex-direction:column;line-height:1.15}.cta small{font-size:12px;color:#cbd3e4;font-weight:600}
+.free{background:var(--card);border:1px dashed var(--acc);border-radius:14px;padding:14px 16px;margin:14px 0 0;text-align:center}
+.free p{margin:0 0 8px;font-size:15px}.free a{color:var(--ink);font-weight:800}
+@media (max-width:560px){.hero{padding:24px 0 30px}h1{font-size:27px;margin:8px 0 10px}}
 </style>
 <script src="/js/clarity.js" defer></script>
 </head><body>
@@ -85,23 +98,22 @@ footer{padding:30px 0 40px;font-size:13px;color:var(--mut)}
 
 <div class="hero"><div class="w">
 <div class="fr"><div class="kick">IA &amp; Business Digital · Guide PDF</div>
-<h1>De l'idée au premier test, avec l'IA et une méthode claire</h1>
-<p>IA &amp; Business Digital est une formation bilingue pour jeunes adultes de 18 ans et plus : 13 chapitres, 12 modèles de business, le dropshipping de A à Z, des fiches à remplir, des prompts, des scripts et un cas corrigé. Des méthodes, pas de promesses de gains.</p>
-<a class="btn" data-buy href="#">Obtenir la formation</a></div>
+<h1>Votre premier business en ligne avec l'IA&nbsp;: un plan clair sur 30 jours</h1>
+<p class="sub">Pour débutants complets (18 ans et +). Comparez 12 modèles de business, testez-en un avec un petit budget et décidez avec de vrais chiffres. Sans promesse de gains.</p>
+<ul class="chips"><li>69 pages</li><li>13 chapitres</li><li>6 fiches</li><li>FR + EN</li></ul>
+<a class="btn" data-buy href="#">Obtenir le guide · 29,99 €</a>
+<span class="trust">Téléchargement immédiat du PDF · Paiement sécurisé via Whop</span>
+<picture><source srcset="img/mockup.webp" type="image/webp"><img class="ph" src="img/mockup.jpg" width="1200" height="900" alt="Le guide IA &amp; Business Digital affiché sur tablette et smartphone" loading="lazy" fetchpriority="high" decoding="async"></picture></div>
 <div class="en"><div class="kick">AI &amp; Digital Business · PDF guide</div>
-<h1>From idea to first test, with AI and a clear method</h1>
-<p>AI &amp; Digital Business is a bilingual training guide for young adults aged 18+: 13 chapters, 12 business models, dropshipping from A to Z, worksheets, prompts, scripts and a worked case. Methods, not promises of earnings.</p>
-<a class="btn" data-buy href="#">Get the training</a></div>
-<picture><source srcset="img/hero.webp" type="image/webp"><img class="ph" src="img/hero.jpg" width="1200" height="900" alt="Jeune adulte travaillant sur un ordinateur portable / Young adult working on a laptop" fetchpriority="high" decoding="async"></picture>
+<h1>Your first online business with AI: a clear 30-day plan</h1>
+<p class="sub">For complete beginners (18+). Compare 12 business models, test one on a small budget and decide with real numbers. No hype, no income promises.</p>
+<ul class="chips"><li>69 pages</li><li>13 chapters</li><li>6 worksheets</li><li>FR + EN</li></ul>
+<a class="btn" data-buy href="#">Get the guide · €29.99</a>
+<span class="trust">Instant PDF download · Secure payment via Whop</span>
+<picture><source srcset="img/mockup-en.webp" type="image/webp"><img class="ph" src="img/mockup-en.jpg" width="1200" height="900" alt="The AI &amp; Digital Business guide shown on a tablet and a smartphone" loading="lazy" fetchpriority="high" decoding="async"></picture></div>
 </div></div>
 
 <div class="w">
-<section><div class="grid s s4">
-<div class="stat"><b>69</b><span class="fr">pages</span><span class="en">pages</span></div>
-<div class="stat"><b>13</b><span class="fr">chapitres</span><span class="en">chapters</span></div>
-<div class="stat"><b>6</b><span class="fr">fiches</span><span class="en">worksheets</span></div>
-<div class="stat"><b>FR+EN</b><span class="fr">côte à côte</span><span class="en">side by side</span></div>
-</div></section>
 
 <section class="fr"><h2>Pour qui ?</h2>
 <picture><source srcset="img/workspace.webp" type="image/webp"><img class="ph" src="img/workspace.jpg" width="1200" height="900" alt="Bureau avec ordinateur, carnet d'esquisses et post-it : de l'idée au premier test" loading="lazy" decoding="async"></picture>
@@ -115,14 +127,14 @@ footer{padding:30px 0 40px;font-size:13px;color:var(--mut)}
 <div class="box"><b>It is not for you if…</b>you want guaranteed income or an effortless shortcut. There is none here.</div></div></section>
 
 <div id="a-content"></div><section class="fr"><h2>Ce que vous recevez</h2>
-<picture><source srcset="img/mockup.webp" type="image/webp"><img class="ph" src="img/mockup.jpg" width="1200" height="900" alt="La formation IA & Business Digital affichée sur tablette et smartphone" loading="lazy" decoding="async"></picture><ul class="ck">
+<ul class="ck">
 <li><b>13 chapitres</b> de 3 leçons chacun, avec une synthèse visuelle, un objectif et une question à se poser.</li>
 <li><b>6 fiches remplissables</b> : offre, fournisseur, rentabilité, planning de contenu, checklist avant lancement, journal d'expérimentation.</li>
 <li><b>8 prompts IA</b> prêts à adapter, en français et en anglais.</li>
 <li><b>4 scripts</b> : proposition de pilote, demande fournisseur, incident de livraison, mention de lien affilié.</li>
 <li><b>Un glossaire</b> et <b>un cas corrigé</b> sur la rentabilité réelle d'une vente.</li></ul></section>
 <section class="en"><h2>What you get</h2>
-<picture><source srcset="img/mockup.webp" type="image/webp"><img class="ph" src="img/mockup.jpg" width="1200" height="900" alt="The AI & Digital Business training shown on a tablet and a smartphone" loading="lazy" decoding="async"></picture><ul class="ck">
+<ul class="ck">
 <li><b>13 chapters</b> of 3 lessons each, with a visual recap, a chapter outcome and a checkpoint question.</li>
 <li><b>6 fillable worksheets</b>: offer, supplier, economics, content planner, pre-launch checklist, experiment log.</li>
 <li><b>8 AI prompts</b> ready to adapt, in French and English.</li>
@@ -150,7 +162,10 @@ footer{padding:30px 0 40px;font-size:13px;color:var(--mut)}
 <div id="a-price"></div><section><div class="price">
 <div class="fr"><div class="kick">Formation Premium · PDF</div><div class="p">29,99 €</div><small>Accès immédiat après paiement · Produit numérique téléchargeable : pas de remboursement après téléchargement, sauf fichier défectueux.</small><a class="btn" data-buy href="#">Obtenir la formation</a></div>
 <div class="en"><div class="kick">Premium Training · PDF</div><div class="p">€29.99</div><small>Instant access after payment · Downloadable digital product: no refund after download, except for a defective file.</small><a class="btn" data-buy href="#">Get the training</a></div>
-</div></section>
+</div>
+<div class="free"><p class="fr">Pas encore prêt ? Commencez par nos ressources IA gratuites (prompts et kits de démarrage).</p><p class="en">Not ready yet? Start with our free AI resources (prompts and starter kits).</p>
+<a data-ev="vers_ressources" class="fr" href="ressources/?lang=fr&amp;utm_source=vente">Voir les ressources gratuites →</a><a data-ev="vers_ressources" class="en" href="ressources/?lang=en&amp;utm_source=vente">See the free resources →</a></div>
+</section>
 
 <div id="a-faq"></div><section><h2>FAQ</h2>
 <div class="fr">
@@ -179,7 +194,7 @@ footer{padding:30px 0 40px;font-size:13px;color:var(--mut)}
 <footer><p class="fr">Formation éducative : aucun revenu garanti. Les budgets, prix et résultats chiffrés sont pédagogiques ; ce ne sont ni des témoignages ni des moyennes de marché. Vérifiez les règles de chaque plateforme et la réglementation de votre pays. © <span translate="no">JL digital store</span></p>
 <p class="en">Educational training: no income guaranteed. Budgets, prices and figures are for teaching; they are neither testimonials nor market averages. Check each platform's rules and your country's regulations. © <span translate="no">JL digital store</span></p></footer>
 </div>
-<div class="cta"><b><span class="fr">29,99 €</span><span class="en">€29.99</span></b><a class="btn" data-buy href="#"><span class="fr">Acheter maintenant</span><span class="en">Buy now</span></a></div>
+<div class="cta"><div class="pr"><b><span class="fr">29,99 €</span><span class="en">€29.99</span></b><small><span class="fr">PDF immédiat · FR + EN</span><span class="en">Instant PDF · FR + EN</span></small></div><a class="btn" data-buy href="#"><span class="fr">Acheter maintenant</span><span class="en">Buy now</span></a></div>
 <script>
 const LINK="https://whop.com/jl-digital-store/ai-digital-business-starter-guide-en-fr/"; // Lien du produit sur Whop
 const CH=[["Trouver un marché qui paie", "Find a market that pays", "Choisir une clientèle, un problème et une première offre testable.", "Choose a customer group, a problem and a testable first offer."], ["Utiliser l’IA comme un professionnel", "Use AI professionally", "Obtenir des livrables fiables, avec un brief et un contrôle humain.", "Create reliable deliverables with a clear brief and human review."], ["12 business possibles sur Internet", "12 online business models", "Comparer revenus, compétences, démarrage et difficultés avant de choisir.", "Compare revenue, skills, first steps and difficulties before choosing."], ["Gagner de l’argent avec une activité IA", "Earn through an AI-assisted business", "Transformer une compétence en offre livrable et facturable.", "Turn a skill into an offer you can deliver and invoice."], ["Communication qui inspire confiance", "Communication that builds trust", "Rédiger des messages clairs, crédibles et adaptés au canal.", "Write clear, credible messages suited to each channel."], ["Attirer une audience utile", "Attract a relevant audience", "Créer des contenus qui conduisent à une action mesurable.", "Create content that leads to a measurable action."], ["Vendre un produit numérique", "Sell a digital product", "Passer d’un fichier à une expérience d’achat claire et fiable.", "Turn a file into a clear and reliable buying experience."], ["Publicité et mesure des résultats", "Advertising and measurement", "Tester sans confondre visibilité, commandes et rentabilité.", "Test without confusing visibility, orders and profitability."], ["Dropshipping : comprendre et choisir", "Dropshipping: understand and choose", "Sélectionner un produit et un marché avant de créer la boutique.", "Select a product and market before creating the store."], ["Fournisseurs, conformité et coûts", "Suppliers, compliance and costs", "Sécuriser le partenaire, le produit et les conditions commerciales.", "Check the partner, product and commercial terms."], ["Créer et lancer la boutique", "Build and launch the store", "Mettre en place une boutique minimale et tester le parcours d’achat.", "Set up a minimal store and test the buying journey."], ["Commandes, retours et rentabilité", "Orders, returns and profitability", "Piloter l’activité après la vente et calculer le résultat réel.", "Manage operations after the sale and calculate the actual result."], ["Plan de lancement et croissance", "Launch plan and growth", "Avancer en 30 jours avec des preuves et des décisions explicites.", "Make progress in 30 days through evidence and explicit decisions."]];
@@ -189,7 +204,8 @@ const list=l=>CH.map((c,i)=>row({i,t:[c[0],c[1]],o:[c[2],c[3]]},l)).join('');
 document.getElementById('cf').innerHTML=list(0);
 document.getElementById('ce').innerHTML=list(1);
 document.querySelectorAll('[data-buy]').forEach(a=>{a.href=LINK;a.target='_top'});
-const set=(l,save)=>{const d=document.documentElement;d.dataset.l=l;d.lang=l;document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang==l)));if(save){try{localStorage.setItem('jl-sales-lang',l)}catch(e){}}};
+const TITLE={fr:"IA & Business Digital — Formation Premium · JL digital store",en:"AI & Digital Business — Premium Training · JL digital store"};
+const set=(l,save)=>{const d=document.documentElement;d.dataset.l=l;d.lang=l;document.title=TITLE[l];document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang==l)));if(save){try{localStorage.setItem('jl-sales-lang',l)}catch(e){}}};
 set(document.documentElement.dataset.l==='en'?'en':'fr',false); // langue déjà choisie dans <head>
 try{const q=new URLSearchParams(location.search).get('lang');if(q==='en'||q==='fr')set(q,true)}catch(e){}
 document.addEventListener('click',e=>{
